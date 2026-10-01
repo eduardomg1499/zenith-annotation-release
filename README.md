@@ -1,49 +1,27 @@
-# Zenith Annotation — descargas y actualizaciones
+# Zenith Annotation
 
-Este repositorio contiene únicamente las entregas publicadas de **Zenith
-Annotation**, el editor científico local de anotaciones y resolución de placas
-para astrofotografía de Zenith Astro Code. El código fuente no está aquí.
+Editor de astrofotografía de Zenith Astro Code para resolver placas, anotar imágenes y crear carruseles, mosaicos y collages.
 
 ## Descargar
 
-Ve a **[Releases](../../releases/latest)** y elige el archivo de tu sistema:
+Abre la [última versión](https://github.com/eduardomg1499/zenith-annotation-release/releases/latest) y elige el instalador de tu equipo:
 
 | Sistema | Archivo |
 | --- | --- |
-| macOS (Apple Silicon) | `Zenith-Annotation_<versión>_aarch64-apple-darwin.dmg` |
-| Windows 10/11 x64 | `Zenith-Annotation_<versión>_x64-setup.exe` |
+| Windows x64 | `Zenith-Annotation_<versión>_x64-setup.exe` |
+| macOS · Apple Silicon | `Zenith-Annotation_<versión>_aarch64-apple-darwin.dmg` |
+| macOS · Intel | `Zenith-Annotation_<versión>_x86_64-apple-darwin.dmg` |
 
-Junto a cada instalador se publica su `.sha256` para que puedas comprobar la
-descarga.
+En macOS, abre el DMG y arrastra la aplicación a Aplicaciones. En Windows, ejecuta el instalador. Las entregas Windows se distribuyen sin certificado Authenticode; si Windows muestra SmartScreen y confías en esta descarga, selecciona **Más información → Ejecutar de todos modos**. La disponibilidad de esa opción depende de la configuración de seguridad de tu equipo.
 
-En macOS:
+Los archivos `.sha256` permiten comprobar la integridad de las descargas.
 
-```sh
-shasum -a 256 -c Zenith-Annotation_<versión>_aarch64-apple-darwin.dmg.sha256
-```
+## Actualizaciones
 
-En Windows (PowerShell):
-
-```powershell
-Get-FileHash .\Zenith-Annotation_<versión>_x64-setup.exe -Algorithm SHA256
-```
-
-## Actualizaciones automáticas
-
-La aplicación instalada consulta `latest.json` de este repositorio al arrancar y
-te avisa cuando hay una versión nueva. Nada se descarga ni se instala sin que lo
-aceptes, y la petición no envía datos de tu sesión ni identificadores de tu
-equipo.
-
-Los archivos `*.app.tar.gz`, `*.sig` y `latest.json` los usa ese actualizador:
-no hace falta descargarlos a mano. Cada paquete va firmado y la aplicación
-verifica la firma antes de aplicarlo.
+La aplicación avisa cuando existe una nueva versión y solicita tu confirmación para instalarla. Los archivos `latest.json`, `.sig` y `.app.tar.gz` se utilizan para las actualizaciones; no necesitas descargarlos manualmente. La aplicación verifica la firma del paquete antes de actualizarse.
 
 ## Soporte
 
-- Web: <https://www.zenith-astro.com>
-- Incidencias y sugerencias: [Issues](../../issues)
+[Web de Zenith Astro Code](https://www.zenith-astro.com) · [Incidencias y sugerencias](https://github.com/eduardomg1499/zenith-annotation-release/issues)
 
-Zenith Annotation es software propietario de Zenith Astro Code. Las entregas de
-este repositorio se distribuyen para su instalación y uso según la licencia que
-acompaña a la aplicación.
+Este repositorio contiene las descargas y actualizaciones. Zenith Annotation es software propietario de Zenith Astro Code y se distribuye según la licencia incluida en la aplicación.
